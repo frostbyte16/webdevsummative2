@@ -1,0 +1,211 @@
+body, html{
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  margin: 0.5rem auto;
+  padding: 2.5rem;
+}
+
+#dashboard, #overview {
+  padding-bottom: 2rem;
+}
+
+/*Header*/
+.header-right {
+  text-align: right;
+}
+
+h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.subtext {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/** Mode toggle **/
+.btn span {
+  color: hsl(228, 12%, 44%);
+  font-weight: 700;
+}
+
+.btn {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  padding: 1.25rem 0 1.25rem 0;
+}
+
+.btn .switch {
+  position: relative;
+  display: inline-block;
+  width: 3.125rem;
+  height: 1.5625rem;
+  margin-left: 0.9375rem;
+  transform: rotate(180deg);
+}
+
+.btn .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.btn .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(230, 22%, 74%); /**COLOR TOGGLE LIGHT**/
+  border-radius: 2.125rem;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.btn .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.063rem;
+  width: 1.063rem;
+  left: 0.1875rem;
+  bottom: 0.25rem;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.btn input:checked + .slider, .btn .slider:hover {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.btn input:focus + .slider {
+  box-shadow: 0 0 1px linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.btn input:checked + .slider:before {
+  -webkit-transform: translateX(1.625rem);
+  -ms-transform: translateX(1.625rem);
+  transform: translateX(1.625rem);
+}
+
+/*Followers*/
+.card{
+  padding: 1.5rem;
+  border: 0;
+}
+
+.followers {
+  text-align: center;
+}
+
+.followers-icon{
+  margin-right: 10px;
+}
+
+.followers-fb {
+  border-top: 0.25rem solid hsl(208, 92%, 53%);
+}
+
+.followers-tw {
+  border-top: 0.25rem solid hsl(203, 89%, 53%);
+}
+
+.followers-ig {
+  border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 100% 1;
+  border-width: 0.25rem;
+  border-style: solid;
+  border-bottom: 0;
+}
+
+.followers-yt {
+  border-top: 0.25rem solid hsl(348, 97%, 39%);
+}
+
+.follower-count {
+  font-size: 4rem;
+}
+
+.follower-increase, .stats-increase {
+  color: hsl(163, 72%, 41%);
+}
+
+.follower-decrease, .stats-decrease {
+  color: hsl(356, 69%, 56%);
+}
+
+.follower-subtext {
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+/*Overview*/
+.stats-card, .stats-title, .stats-increase, .stats-decrease, .stats-count, .img-icon {
+  padding: 0.7rem;
+}
+
+.stats-increase, .stats-decrease, .img-icon {
+  text-align: right;
+}
+
+.stats-title {
+  font-size: 1rem;
+}
+
+.stats-count {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*Light Mode*/
+body{
+  background-color: hsl(0, 0%, 100%);
+}
+
+.card{
+  background-color: hsl(227, 47%, 96%);
+}
+
+.handle, .follower-subtext, .stats-title, .subtext {
+  color: hsl(228, 12%, 44%);
+}
+
+h2, h4, .follower-count, .stats-count,.attribution{
+  color: hsl(230, 17%, 14%);
+}
+
+
+
+/*Dark Mode*/
+
+body.dark{
+  background-color: hsl(230, 17%, 14%);
+}
+
+.dark .card{
+  background-color: hsl(228, 28%, 20%);
+}
+
+.dark .handle,.dark .follower-subtext,.dark .stats-title,.dark .subtext {
+  color: hsl(228, 34%, 66%);
+}
+
+.dark h2,.dark h4,.dark .follower-count,.dark .stats-count,.dark .attribution{
+  color: hsl(0, 0%, 100%);
+}
+
+.dark .btn .slider:hover:before{
+  color: hsl(228, 28%, 20%);
+}
+
+.dark .btn:hover > span{
+  color: hsl(228, 34%, 66%);
+  cursor: pointer;
+}
